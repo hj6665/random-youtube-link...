@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random YouTube Link</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f9;
+      font-family: Arial, sans-serif;
+    }
+    .button {
+      padding: 15px 30px;
+      font-size: 18px;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <button class="button" onclick="openRandomLink()">NHỮNG BÀI HỌC VỀ CSS</button>
+
+  <script>
+    const links = [
+      "https://youtube.com/watch?v=Fh2Hfx4_5xw&si=2LeTpkMEi5NuItYe",
+      "https://youtu.be/MdNpZJARPnY?si=Y_Ur3ZviZkTUZu_U",
+      "https://youtube.com/watch?v=DCz-PPVL97Q&si=0PFTE01yj9jfcN8K"
+    ];
+
+    function openRandomLink() {
+      const randomIndex = Math.floor(Math.random() * links.length);
+      window.open(links[randomIndex], '_blank');
+    }
+  </script>
+</body>
+</html>
